@@ -24,8 +24,9 @@ class Pokemon extends Component{
           <Row>
             {
               Object.keys(pokes).map((poke) => {
+                pokes[poke].fbkey = poke;
                 return (
-                <Col sm="4">
+                <Col sm="4" key={pokes[poke].fbkey}>
                 <Card className="Card">
                   <CardImg top width="100%" src={pokes[poke].ThumbnailImage} alt="Card image cap" />
                   <CardBody>
